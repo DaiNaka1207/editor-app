@@ -19,5 +19,8 @@ Route::get('/', function () {
     return redirect()->route('post.show', ['post' => 1]);
 });
 
+// イメージが貼り付けられた際の処理
+Route::post('/upload', [PostController::class, 'upload']);
+
 // PostControllerをリソースコントローラーとして読み込み
 Route::resource('post', PostController::class);
