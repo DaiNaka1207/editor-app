@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // post->idが1の閲覧ページにリダイレクト
+    return redirect()->route('post.show', ['post' => 1]);
 });
+
+// PostControllerをリソースコントローラーとして読み込み
+Route::resource('post', PostController::class);
