@@ -38,13 +38,13 @@ class PostController extends Controller
     {
         return view('post.index', compact('post'));
     }
-
+    
     /**
      * Show the form for editing the specified resource.
      */
     public function edit(post $post)
     {
-        //
+        return view('post.edit', compact('post'));
     }
 
     /**
@@ -52,7 +52,8 @@ class PostController extends Controller
      */
     public function update(Request $request, post $post)
     {
-        //
+        $post->fill($request->all())->save();
+        return view('post.index', compact('post'));
     }
 
     /**
