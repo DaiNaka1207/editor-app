@@ -14,7 +14,7 @@
     {!! $post->contents !!}
 
     <hr>
-    <small><a href="https://portfolio.dainaka.live">&copy; 2020 DaiNaka</a></small>
+    <small><a href="https://portfolio.dainaka.live">&copy; 2023 DaiNaka</a></small>
 
 </body>
 </html>
