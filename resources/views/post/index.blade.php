@@ -8,12 +8,13 @@
 </head>
 <body>
     <h1>{{config('app.name')}}</h1>
+    <a href="{{route('post.edit', ['post' => $post->id])}}">編集</a>
     <hr>
 
     {!! $post->contents !!}
 
     <hr>
-    <a href="{{route('post.edit', ['post' => $post->id])}}">編集</a>
+    <small><a href="https://portfolio.dainaka.live">&copy; 2020 DaiNaka</a></small>
 
 </body>
 </html>
